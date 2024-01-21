@@ -1,19 +1,15 @@
 "use client";
-import { useUser } from "@/context/UserContext";
 import { LockOutlined } from "@mui/icons-material";
 import {
   Avatar,
   Box,
+  Button,
   Container,
   CssBaseline,
-  ThemeProvider,
-  Typography,
-  TextField,
-  FormControlLabel, 
-  Checkbox, 
-  Link, 
   Grid,
-  Button
+  Link,
+  TextField,
+  Typography
 } from "@mui/material";
 import { useRouter } from "next/navigation";
 
@@ -21,7 +17,7 @@ import { useRouter } from "next/navigation";
 
 export default function Login() {
     const router = useRouter()
-    const {login} = useUser
+    // const {login} = useUser()
 
   const handleSubmit = (e) => {
     e.preventDefault();
