@@ -1,8 +1,18 @@
 "use client";
 
-import Profile from "@/components/Profile";
 import { useUser } from "@/context/UserContext";
-import { TextField } from "@mui/material";
+import { LockOutlined } from "@mui/icons-material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Container,
+  CssBaseline,
+  Grid,
+  Link,
+  TextField,
+  Typography
+} from "@mui/material";
 
 export default function Signup() {
     const {createAccount} = useUser()
@@ -19,6 +29,7 @@ export default function Signup() {
   };
 
   return (
+    <>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -30,7 +41,7 @@ export default function Signup() {
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
+            <LockOutlined />
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign up
@@ -106,5 +117,5 @@ export default function Signup() {
           </Box>
         </Box>
       </Container>
-  );
+  </>);
 }
