@@ -1,19 +1,13 @@
+import { useUser } from "@/context/UserContext";
+import { Button } from "@mui/material";
 import { useState } from "react";
 
 export default function Profile(user) {
-const [currentUser, setUser] = useState(user)
+const { currentUser } = useUser()
 return (
     <>
       <h1>{currentUser.name}</h1>
-      <img
-        className="avatar"
-        src={currentUser.imageUrl}
-        alt={'Photo of ' + currentUser.name}
-        style={{
-          width: currentUser.imageSize,
-          height: currentUser.imageSize
-        }}
-      />
+      <Button onClick='#'>Cart</Button>
     </>
   );
 }
