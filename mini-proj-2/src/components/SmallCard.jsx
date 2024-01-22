@@ -1,14 +1,16 @@
 "use client";
 import {
-    Button,
-    Card,
-    CardActions,
-    CardContent,
-    CardMedia,
-    Typography,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
 } from "@mui/material";
 
 export default function SmallCard({ name, image, description, price }) {
+  
+
   return (
     <Card sx={{ maxWidth: 400, marginY: 2}}>
       <CardMedia

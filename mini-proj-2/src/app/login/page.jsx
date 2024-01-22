@@ -17,7 +17,7 @@ import { useRouter } from "next/navigation";
 
 export default function Login() {
     const router = useRouter()
-    // const {login} = useUser()
+    const {login} = useUser()
 
   const handleSubmit = (e) => {
     e.preventDefault();

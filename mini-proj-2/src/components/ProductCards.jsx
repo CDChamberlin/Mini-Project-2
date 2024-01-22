@@ -3,10 +3,9 @@ import FetchProducts from "./FetchProducts";
 import SmallCard from "./SmallCard";
 
 export default function ProductCards() {
-  const [cart, setCart] = useState([]);
   const [productList, setProductList] = useState([]);
   const [cards, setCards] = useState([]);
-  const [loggedIn, setLoggedIn] = useState(false);
+  // const [loggedIn, setLoggedIn] = useState(false);
 
   const isValidHttpUrl = (string) => {
     try {
@@ -64,15 +63,7 @@ export default function ProductCards() {
     //     .appendChild(featuredCards[i]);
     // }
   };
-  const addToCart = (itemName) => {
-    console.log("Item added.");
-    const selectedItem = productList.find((item) => item.title === itemName);
-    if (selectedItem) {
-      setCart((prevCart) => [...prevCart, selectedItem]);
-      console.log(cart);
-    }
-  };
-
+ 
   console.log("ProductCards rendered")
 
   return (
