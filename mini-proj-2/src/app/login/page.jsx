@@ -1,4 +1,5 @@
 "use client";
+import { useUser } from "@/context/UserContext";
 import { LockOutlined } from "@mui/icons-material";
 import {
   Avatar,
@@ -17,15 +18,15 @@ import { useRouter } from "next/navigation";
 
 export default function Login() {
     const router = useRouter()
-    const {login} = useUser()
+    const user = useUser()
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    login = {
+    user.login({
       email: data.get("email"),
       password: data.get("password"),
-    };
+    })
 
     router.push('/dashboard')
     

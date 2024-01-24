@@ -1,4 +1,5 @@
 "use client";
+import { useCart } from "@/context/CartContext";
 import {
   Button,
   Card,
@@ -9,7 +10,7 @@ import {
 } from "@mui/material";
 
 export default function SmallCard({ name, image, description, price }) {
-  
+  const userCart = useCart()
 
   return (
     <Card sx={{ maxWidth: 400, marginY: 2}}>
@@ -29,7 +30,7 @@ export default function SmallCard({ name, image, description, price }) {
         <Typography variant="body2">$ {price}</Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={() => addToCart(name)}>
+        <Button size="small" onClick={() => userCart.addToCart(name)}>
           Add to Cart
         </Button>
         <Button size="small">Product Page</Button>
